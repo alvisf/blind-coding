@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BlindCodingComponent implements OnInit {
   hide=true;
   counter: { min: number, sec: number }
+  breakpoint: number;
   startTimer() {
     this.counter = { min: 30, sec: 0 } // choose whatever you want
     let intervalId = setInterval(() => {
@@ -19,13 +20,13 @@ export class BlindCodingComponent implements OnInit {
       if (this.counter.min === 0 && this.counter.sec == 0) clearInterval(intervalId)
     }, 1000)
   }
-
   
   constructor() { }
 
   ngOnInit(): void {
     this.counter = { min: 30, sec: 0 };
     this.startTimer();
+
     
   }
   

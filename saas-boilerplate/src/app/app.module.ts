@@ -33,7 +33,6 @@ import { BlindCodingComponent } from './blind-coding/blind-coding.component';
 
 
 
-
 @NgModule({
   declarations: [AppComponent, NavMenuComponent, SuperSecretComponent, AuthPageComponent, BlindCodingComponent,],
   imports: [
