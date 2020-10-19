@@ -1,6 +1,6 @@
-# SAAS boilerplate
+# Blind Coding
 
-Its a lightweight SAAS boilerplate built of minimal maintenance
+Coding contest platform.
 
 # How I am building this
 
