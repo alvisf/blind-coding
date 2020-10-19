@@ -1,0 +1,15 @@
+<h2>{{counter.min}} : {{counter.sec}}</h2>
+     
+<mat-form-field appearance="outline">
+    <mat-label>Enter your code</mat-label>
+    <input matInput [type]="hide ? 'password' : 'password'">
+    
+</mat-form-field>
+ 
+
+<button mat-icon-button color="primary" aria-label="Run Your Code">
+    <mat-icon>play_arrow</mat-icon>
+</button>
+<h4>Your code has been compiled</h4>
+<button mat-raised-button color="warn"
+>END TEST</button>

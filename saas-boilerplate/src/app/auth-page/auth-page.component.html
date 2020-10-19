@@ -1,0 +1,56 @@
+<mat-card>
+    
+    <div *ngIf="auth.user$ | async as user; else login">
+      <button
+      mat-raised-button
+      routerLink="/secret"
+      color="secondary"
+      class="button"
+      [disabled]="clicked" (click)="actionMethod();"
+      >
+      START TEST
+      </button>
+    </div>
+    
+
+    <!-- <div *ngIf="auth.user$ | async as user; else login">
+      <pre>
+            {{ user | json }}
+          </pre>
+  
+      <hr />
+      <hr />
+      <button
+        mat-raised-button
+        color="secondary"
+        class="button"
+
+        (click)="auth.signOut()"
+      >
+        Sign Out
+      </button>
+    </div> -->
+  
+    <ng-template #login>
+      <mat-card-header>
+        <mat-card-title>Login/SignUp</mat-card-title>
+        <mat-card-subtitle>{{ title }}</mat-card-subtitle>
+      </mat-card-header>
+      <button
+        mat-raised-button
+        color="primary"
+        class="button"
+        (click)="auth.googleSignin()"
+      >
+        Login with Google
+      </button>
+    </ng-template>
+  </mat-card>
+
+  <!-- <mat-icon
+    aria-hidden="false"
+    aria-label="Example home icon"
+    routerLink="/secret"
+    >lock</mat-icon
+  >
+   -->

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "saas-temp": {
+      "hosting": {
+        "saas-boilerplate": [
+          "saas-temp"
+        ]
+      }
+    }
+  }
+}
