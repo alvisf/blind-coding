@@ -1,15 +1,29 @@
-<h2>{{counter.min}} : {{counter.sec}}</h2>
-     
-<mat-form-field appearance="outline">
-    <mat-label>Enter your code</mat-label>
-    <input matInput [type]="hide ? 'password' : 'password'">
-    
-</mat-form-field>
- 
-
-<button mat-icon-button color="primary" aria-label="Run Your Code">
-    <mat-icon>play_arrow</mat-icon>
-</button>
-<h4>Your code has been compiled</h4>
-<button mat-raised-button color="warn"
->END TEST</button>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile><h5>Question</h5></mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your code</mat-label>
+      <input matInput [type]="hide ? 'password' : 'password'" />
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div style="min-width: 80%">
+      <mat-grid-list cols="1" rowHeight="50">
+        <mat-grid-tile
+          ><h2>{{ counter.min }} : {{ counter.sec }}</h2></mat-grid-tile
+        >
+        <mat-grid-tile>Timer</mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-flat-button color="primary" aria-label="Run Your Code">
+      <span>Compile and Run</span>
+      <mat-icon>play_arrow</mat-icon>
+    </button></mat-grid-tile
+  >
+  <mat-grid-tile><h4>Compiler</h4></mat-grid-tile>
+  <mat-grid-tile
+    ><button mat-raised-button color="warn">SUBMIT & END TEST</button>
+  </mat-grid-tile>
+</mat-grid-list>

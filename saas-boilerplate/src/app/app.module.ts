@@ -17,6 +17,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 
@@ -35,7 +37,7 @@ import { BlindCodingComponent } from './blind-coding/blind-coding.component';
 @NgModule({
   declarations: [AppComponent, NavMenuComponent, SuperSecretComponent, AuthPageComponent, BlindCodingComponent,],
   imports: [
-
+    MatGridListModule,
     AppRoutingModule,
     FormsModule,
     MatChipsModule,
