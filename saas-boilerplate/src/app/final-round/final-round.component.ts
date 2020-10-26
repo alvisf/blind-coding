@@ -1,15 +1,13 @@
-import { auth } from 'firebase/app';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
-import { async } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+
 @Component({
-  selector: 'app-blind-coding',
-  templateUrl: './blind-coding.component.html',
-  styleUrls: ['./blind-coding.component.css']
+  selector: 'app-final-round',
+  templateUrl: './final-round.component.html',
+  styleUrls: ['./final-round.component.css']
 })
-export class BlindCodingComponent implements OnInit {
+export class FinalRoundComponent implements OnInit {
   hide=true;
   clientCode1: string;
   clientCode2: string;
@@ -79,6 +77,4 @@ export class BlindCodingComponent implements OnInit {
     this.auth.user$.subscribe(event => this.userName = event.displayName);
 
   }
-
-  
 }

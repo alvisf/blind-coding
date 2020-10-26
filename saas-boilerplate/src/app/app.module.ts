@@ -19,7 +19,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AngularFireModule } from '@angular/fire';
@@ -30,12 +30,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SuperSecretComponent } from './super-secret/super-secret.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
 import { BlindCodingComponent } from './blind-coding/blind-coding.component';
+import { FinalRoundComponent } from './final-round/final-round.component';
+import { ThankyouPageComponent } from './thankyou-page/thankyou-page.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent, SuperSecretComponent, AuthPageComponent, BlindCodingComponent,],
-  imports: [
+  declarations: [AppComponent, NavMenuComponent, SuperSecretComponent, AuthPageComponent, BlindCodingComponent, FinalRoundComponent, ThankyouPageComponent,],
+  imports: [HttpClientModule,
     MatGridListModule,
     AppRoutingModule,
     FormsModule,

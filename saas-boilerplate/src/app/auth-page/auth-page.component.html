@@ -2,13 +2,24 @@
   <div *ngIf="auth.user$ | async as user; else login">
     <button
       mat-raised-button
-      routerLink="/secret"
+      routerLink="/one"
       color="secondary"
       class="button"
       [disabled]="clicked"
       (click)="actionMethod()"
     >
-      START TEST
+      START BASIC ROUND
+    </button>
+    &nbsp;&nbsp;
+    <button
+      mat-raised-button
+      routerLink="/final"
+      color="secondary"
+      class="button"
+      [disabled]="clicked"
+      (click)="actionMethod()"
+    >
+      START FINAL ROUND
     </button>
   </div>
 
