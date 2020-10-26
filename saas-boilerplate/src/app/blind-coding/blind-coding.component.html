@@ -134,7 +134,12 @@
     </mat-grid-tile>
 
     <mat-grid-tile>
-      <button mat-raised-button color="warn" routerLink="/thankyou">
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="submitForm()"
+        routerLink="/thankyou"
+      >
         SUBMIT & END TEST
       </button>
     </mat-grid-tile>
