@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { async } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-blind-coding',
   templateUrl: './blind-coding.component.html',
@@ -33,7 +34,7 @@ export class BlindCodingComponent implements OnInit {
     
   }
   
-  constructor(private http:HttpClient,public auth: AuthService) { }
+  constructor(private http:HttpClient,public auth: AuthService,private router: Router) { }
   timeTaken: any;
    userName:string;
    submitForm(){
@@ -55,7 +56,7 @@ export class BlindCodingComponent implements OnInit {
     this.http.post<any>('https://api.airtable.com/v0/appPMDBDgZDDKoYfT/blind%20coding', body, { headers }).subscribe(data => {
         this.postId = data.id;
     });
-
+    this.router.navigate(['/thankyou']);
   }
 
   enterClicked1(){

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -31,7 +32,7 @@ export class FinalRoundComponent implements OnInit {
     
   }
   
-  constructor(private http:HttpClient,public auth: AuthService) { }
+  constructor(private http:HttpClient,public auth: AuthService,private router: Router) { }
   timeTaken: any;
    userName:string;
    submitForm(){
@@ -53,7 +54,7 @@ export class FinalRoundComponent implements OnInit {
     this.http.post<any>('https://api.airtable.com/v0/appPMDBDgZDDKoYfT/blind%20coding', body, { headers }).subscribe(data => {
         this.postId = data.id;
     });
-
+    this.router.navigate(['/thankyou']);
   }
 
   enterClicked1(){
