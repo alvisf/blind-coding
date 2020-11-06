@@ -5,7 +5,7 @@
       routerLink="/one"
       color="secondary"
       class="button"
-      [disabled]="clicked"
+      disabled
       (click)="actionMethod()"
     >
       START BASIC ROUND
@@ -16,13 +16,13 @@
       routerLink="/final"
       color="secondary"
       class="button"
-      [disabled]="clicked"
+      disabled
       (click)="actionMethod()"
     >
       START FINAL ROUND
     </button>
   </div>
-
+  <!-- [disabled]="clicked" -->
   <!-- <div *ngIf="auth.user$ | async as user; else login">
       <pre>
         {{ user | json }}

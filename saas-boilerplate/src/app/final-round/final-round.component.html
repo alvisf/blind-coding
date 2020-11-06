@@ -2,43 +2,322 @@
   <mat-grid-list cols="3" rowHeight="1.5:1" [gutterSize]="'10px'">
     <mat-grid-tile rowspan="2"
       ><div style="overflow: auto; width: 600px; height: 400px">
-        <p>ROUND 2: (MEDIUM)</p>
-        <p><br /></p>
-        <p>
-          1. Given an integer array, find the maximum product from the array.
+        <style type="text/css">
+          p.p1 {
+            margin: 0px 0px 5px 0px;
+            font: 22.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p2 {
+            margin: 0px 0px 8px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p3 {
+            margin: 0px 0px 0px 0px;
+            font: 12px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p6 {
+            margin: 0px 0px 15px 0px;
+            font: 10px Courier;
+            color: #262626;
+            background-color: #ffffff;
+          }
+
+          p.p7 {
+            margin: 0px 0px 15px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          li.li4 {
+            margin: 0px 0px 0px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+          }
+
+          li.li5 {
+            margin: 0px 0px 2px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+          }
+
+          span.s1 {
+            font: 13.5px "Times New Roman";
+          }
+
+          span.s2 {
+            font: 10px Symbol;
+          }
+
+          span.s3 {
+            background-color: #ffffff;
+          }
+
+          span.s4 {
+            font: 13.5px "Times New Roman";
+            background-color: #ffffff;
+          }
+
+          ul.ul1 {
+            list-style-type: disc;
+          }
+        </style>
+        <style type="text/css">
+          p.p1 {
+            margin: 0px 0px 5px 0px;
+            font: 22.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p2 {
+            margin: 0px 0px 15px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p3 {
+            margin: 0px 0px 0px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p5 {
+            margin: 0px 0px 8px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p6 {
+            margin: 0px 0px 0px 0px;
+            font: 12px Helvetica;
+            color: #393939;
+            background-color: #ffffff;
+          }
+
+          p.p8 {
+            margin: 0px 0px 15px 0px;
+            font: 10px Courier;
+            color: #262626;
+            background-color: #ffffff;
+          }
+
+          li.li4 {
+            margin: 0px 0px 0px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+          }
+
+          li.li7 {
+            margin: 0px 0px 2px 0px;
+            font: 11.5px Helvetica;
+            color: #393939;
+          }
+
+          span.s1 {
+            font: 13.5px "Times New Roman";
+          }
+
+          span.s2 {
+            font: 9.5px "Times New Roman";
+          }
+
+          span.s3 {
+            font: 10px Symbol;
+          }
+
+          span.s4 {
+            background-color: #ffffff;
+          }
+
+          span.s5 {
+            font: 13.5px "Times New Roman";
+            background-color: #ffffff;
+          }
+
+          span.s6 {
+            font: 9.5px "Times New Roman";
+            background-color: #ffffff;
+          }
+
+          ul.ul1 {
+            list-style-type: disc;
+          }
+        </style>
+        <p class="p1"><strong>A Problem on Sticks&nbsp;</strong></p>
+        <p class="p2">
+          On a sunny day, Akbar and Birbal were taking a leisurely walk in
+          palace gardens. Suddenly, Akbar noticed a bunch of sticks on the
+          ground and decided to test Birbal&apos;s wits.
         </p>
-        <p>INPUT : [1,2,-2,0,1,-3]</p>
-        <p>OUTPUT : 12</p>
-        <p><br /></p>
-        <p>
-          2. Given an integer array, find if there is a pair in an array whose
-          sum is K.
+        <p class="p3">
+          There are <span class="s1">N</span>N stick holders with negligible
+          size (numbered <span class="s1">1</span>1 through
+          <span class="s1">N</span>N) in a row on the ground. Akbar places all
+          the sticks in them vertically; for each valid
+          <span class="s1">i</span>i, the initial height of the stick in the
+          <span class="s1">i</span>i-th holder is <span class="s1">A</span
+          ><span class="s2">i</span>Ai. Birbal has a stick cutter and his task
+          is to completely cut all these sticks, i.e. reduce the heights of all
+          sticks to <span class="s1">0</span>0. He may perform zero or more
+          operations; in each operation, he should do the following:
         </p>
-        <p>INPUT : [4,2,7,4,1,10], k = 9.</p>
-        <p>OUTPUT : 2,7</p>
-        <p><br /></p>
-        <p>
-          3. Given an integer array, find whether it can form a wave in a graph.
+        <ul class="ul1">
+          <li class="li4">
+            <span class="s4">Choose an integer&nbsp;</span
+            ><span class="s5">H</span
+            ><span class="s4">H and fix the cutter at the height&nbsp;</span
+            ><span class="s5">H</span
+            ><span class="s4">H&nbsp;above the ground.</span>
+          </li>
+          <li class="li4">
+            <span class="s4">The cutter moves from the&nbsp;</span
+            ><span class="s5">1</span><span class="s4">1-st to the&nbsp;</span
+            ><span class="s5">N</span
+            ><span class="s4"
+              >N-th stick holder. Whenever it encounters a stick whose current
+              height is greater than&nbsp;</span
+            ><span class="s5">H</span
+            ><span class="s4">H, it cuts this stick down to height&nbsp;</span
+            ><span class="s5">H</span
+            ><span class="s4">H (i.e. for a stick with height&nbsp;</span
+            ><span class="s5">h&gt;H</span
+            ><span class="s4"
+              >h&gt;H, it removes its upper part with length&nbsp;</span
+            ><span class="s5">h&minus;H</span
+            ><span class="s4">h&minus;H).</span>
+          </li>
+          <li class="li4">
+            <span class="s4"
+              >All the upper parts of sticks that are cut in one operation must
+              have equal lengths. Otherwise, the operation may not be
+              performed.</span
+            >
+          </li>
+        </ul>
+        <p class="p5">
+          For example, if the heights of sticks are initially
+          <span class="s1">[5,3,5]</span>[5,3,5], then some valid values for
+          <span class="s1">H</span>H in the first operation are
+          <span class="s1">3</span>3 and <span class="s1">4</span>4 ― the cutter
+          cuts the upper parts of two sticks and their lengths are
+          <span class="s1">[2,2]</span>[2,2] and
+          <span class="s1">[1,1]</span>[1,1] respectively.
+          <span class="s1">H=2</span>H=2 is an invalid choice because it would
+          cut the upper parts of all three sticks with lengths
+          <span class="s1">[3,1,3]</span>[3,1,3], which are not all equal.
         </p>
-        <p>INPUT : [1,4,3,5,2,3,6,2,4,2]</p>
-        <p>OUTPUT : YES</p>
-        <p><br /></p>
-        <p>INPUT : [1,2,3,4,5]</p>
-        <p>OUTPUT : NO</p>
-        <p><br /></p>
-        <p>4. Given an input string s, reverse the order of the words.</p>
-        <p>INPUT : the sky is blue</p>
-        <p>OUTPUT : blue is sky the</p>
-        <p><br /></p>
-        <p>5. Given a number, print its corresponding Roman Numeral.</p>
-        <p>INPUT : 4</p>
-        <p>OUTPUT : IV</p>
-        <p><br /></p>
-        <p>INPUT : 56</p>
-        <p>OUTPUT : LVII</p>
-        <p><br /></p>
-        <p>INPUT : 1994</p>
-        <p>OUTPUT : MCMXCIV</p>
+        <p class="p2">
+          Akbar wants Birbal to completely cut all sticks in the minimum
+          possible number of operations. If you want to be friends with Birbal,
+          help him solve the problem.
+        </p>
+        <p class="p6">Input</p>
+        <ul class="ul1">
+          <li class="li4">
+            <span class="s4"
+              >The first line of the input contains a single integer&nbsp;</span
+            ><span class="s5">T</span
+            ><span class="s4"
+              >T denoting the number of test cases. The description
+              of&nbsp;</span
+            ><span class="s5">T</span
+            ><span class="s4">T&nbsp;test cases follows.</span>
+          </li>
+          <li class="li4">
+            <span class="s4"
+              >The first line of each test case contains a single
+              integer&nbsp;</span
+            ><span class="s5">N</span><span class="s4">N.</span>
+          </li>
+          <li class="li7">
+            <span class="s4">The second line contains&nbsp;</span
+            ><span class="s5">N</span
+            ><span class="s4">N space-separated integers&nbsp;</span
+            ><span class="s5">A</span><span class="s6">1</span
+            ><span class="s5">,A</span><span class="s6">2</span
+            ><span class="s5">,&hellip;,A</span><span class="s6">N</span
+            ><span class="s4">A1,A2,&hellip;,AN.</span>
+          </li>
+        </ul>
+        <p class="p6">Output</p>
+        <p class="p2">
+          For each test case, print a single line containing one integer ― the
+          minimum number of operations needed to completely cut all the sticks.
+        </p>
+        <p class="p6">Constraints</p>
+        <ul class="ul1">
+          <li class="li4">
+            <span class="s5">1&le;T&le;50</span
+            ><span class="s4">1&le;T&le;50</span>
+          </li>
+          <li class="li4">
+            <span class="s5">1&le;N&le;10</span><span class="s6">5</span
+            ><span class="s4">1&le;N&le;105</span>
+          </li>
+          <li class="li7">
+            <span class="s5">0&le;A</span><span class="s6">i</span
+            ><span class="s5">&le;10</span><span class="s6">9</span
+            ><span class="s4">0&le;Ai&le;109 for each valid&nbsp;</span
+            ><span class="s5">i</span><span class="s4">i</span>
+          </li>
+        </ul>
+        <p class="p6">Subtasks</p>
+        <p class="p5">
+          <strong>Subtask #1 (20 points):</strong>
+          <span class="s1">N&le;50</span>N&le;50
+        </p>
+        <p class="p2">
+          <strong>Subtask #2 (80 points):</strong> original constraints
+        </p>
+        <p class="p6">Example Input</p>
+        <p class="p8">1</p>
+        <p class="p8">3</p>
+        <p class="p8">1 2 3</p>
+        <p class="p6">Example Output</p>
+        <p class="p8">3</p>
+        <p class="p6">Explanation</p>
+        <p class="p2">
+          <strong>Example case 1:</strong> Birbal may perform the following
+          three operations:
+        </p>
+        <ul class="ul1">
+          <li class="li4">
+            <span class="s4">Fix the cutter at&nbsp;</span
+            ><span class="s5">H=2</span
+            ><span class="s4"
+              >H=2. The heights of the sticks after this operation
+              are&nbsp;</span
+            ><span class="s5">[1,2,2]</span><span class="s4">[1,2,2].</span>
+          </li>
+          <li class="li4">
+            <span class="s4">Fix the cutter at&nbsp;</span
+            ><span class="s5">H=1</span
+            ><span class="s4"
+              >H=1. The heights of the sticks after this operation
+              are&nbsp;</span
+            ><span class="s5">[1,1,1]</span><span class="s4">[1,1,1].</span>
+          </li>
+          <li class="li4">
+            <span class="s4">Fix the cutter at&nbsp;</span
+            ><span class="s5">H=0</span
+            ><span class="s4"
+              >H=0. After this operation, all sticks are completely cut.</span
+            >
+          </li>
+        </ul>
       </div></mat-grid-tile
     >
     <mat-grid-tile rowspan="2">
@@ -58,78 +337,6 @@
               onPaste="return false"
               autocomplete="off"
               (keydown.enter)="$event.preventDefault(); enterClicked1()"
-            />
-          </mat-form-field>
-        </p>
-        <p>Question 2</p>
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter your code</mat-label>
-            <input
-              matInput
-              [(ngModel)]="clientCode2"
-              name="mycode2"
-              [type]="hide ? 'password' : 'password'"
-              onCopy="return false"
-              onDrag="return false"
-              onDrop="return false"
-              onPaste="return false"
-              autocomplete="off"
-              (keydown.enter)="$event.preventDefault(); enterClicked2()"
-            />
-          </mat-form-field>
-        </p>
-        <p>Question 3</p>
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter your code</mat-label>
-            <input
-              matInput
-              [(ngModel)]="clientCode3"
-              name="mycode3"
-              [type]="hide ? 'password' : 'password'"
-              onCopy="return false"
-              onDrag="return false"
-              onDrop="return false"
-              onPaste="return false"
-              autocomplete="off"
-              (keydown.enter)="$event.preventDefault(); enterClicked3()"
-            />
-          </mat-form-field>
-        </p>
-        <p>Question 4</p>
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter your code</mat-label>
-            <input
-              matInput
-              [(ngModel)]="clientCode4"
-              name="mycode4"
-              [type]="hide ? 'password' : 'password'"
-              onCopy="return false"
-              onDrag="return false"
-              onDrop="return false"
-              onPaste="return false"
-              autocomplete="off"
-              (keydown.enter)="$event.preventDefault(); enterClicked4()"
-            />
-          </mat-form-field>
-        </p>
-        <p>Question 5</p>
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter your code</mat-label>
-            <input
-              matInput
-              [(ngModel)]="clientCode5"
-              name="mycode5"
-              [type]="hide ? 'password' : 'password'"
-              onCopy="return false"
-              onDrag="return false"
-              onDrop="return false"
-              onPaste="return false"
-              autocomplete="off"
-              (keydown.enter)="$event.preventDefault(); enterClicked5()"
             />
           </mat-form-field>
         </p>
