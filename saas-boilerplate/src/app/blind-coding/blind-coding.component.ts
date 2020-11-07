@@ -29,7 +29,7 @@ export class BlindCodingComponent implements OnInit {
       else this.counter.sec -= 1
       if (this.counter.min === 0 && this.counter.sec == 0) {
         clearInterval(intervalId)
-        this.timeTaken= 1800-((this.counter.min* 60)+(this.counter.sec));
+        this.timeTaken= 2700-((this.counter.min* 60)+(this.counter.sec));
 
 
         const headers = { 'Authorization': 'Bearer keyptw41XS0xa0zHE', 'Content-Type': 'application/json' };
@@ -53,7 +53,7 @@ export class BlindCodingComponent implements OnInit {
    submitForm(){
     
 
-    this.timeTaken= 1800-((this.counter.min* 60)+(this.counter.sec));
+    this.timeTaken= 2700-((this.counter.min* 60)+(this.counter.sec));
 
 
     const headers = { 'Authorization': 'Bearer keyptw41XS0xa0zHE', 'Content-Type': 'application/json' };
